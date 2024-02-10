@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Protest+Revolution&display=swap');
+body {
+  padding: 0;
+  margin: 0;
+  background: url('https://c4.wallpaperflare.com/wallpaper/51/338/359/red-4k-love-image-heart-wallpaper-preview.jpg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+.gift1 {
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+}
+#icon {
+  cursor: pointer;
+}
+.gift {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1.2s ease-in-out;
+  transition-duration: 1.2s;
+  transition: 4s ease-in-out;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 53px;
+    padding: 29px 0px;
+    box-shadow: 2px 2px 7px #9E9E9E;
+    visibility: hidden;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.rose {
+  transition: 0.3s ease-in-out;
+  opacity: 0.1;
+}
+.title {
+    background: url('https://c4.wallpaperflare.com/wallpaper/51/338/359/red-4k-love-image-heart-wallpaper-preview.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.3s ease-in-out;
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+  }
+  
