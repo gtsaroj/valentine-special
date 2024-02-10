@@ -1,10 +1,11 @@
-const icon = document.querySelector("#icon");
+
+const icon = document.querySelector("#icon")! as HTMLElement;
 const container = document.getElementsByClassName("container");
 const JsConfetti = new JSConfetti();
-const card = document.querySelector(".card");
-const rose = document.querySelector(".rose");
-const title = document.querySelector(".title");
-const gift1 = document.querySelector(".gift1");
+const card = document.querySelector(".card")! as HTMLElement;
+const rose = document.querySelector(".rose")! as HTMLElement;
+const title = document.querySelector(".title")! as HTMLElement;
+const gift1 = document.querySelector(".gift1")! as HTMLElement;
 
 icon.addEventListener("click", () => {
   JsConfetti.addConfetti();

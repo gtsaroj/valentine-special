@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>valentine special</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../dist/script.js" defer></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Protest+Revolution&display=swap');
+body {
+  padding: 0;
+  margin: 0;
+  background: url('https://c4.wallpaperflare.com/wallpaper/51/338/359/red-4k-love-image-heart-wallpaper-preview.jpg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+}
+.gift1 {
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+}
+#icon {
+  cursor: pointer;
+}
+.gift {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1.2s ease-in-out;
+  transition-duration: 1.2s;
+  transition: 4s ease-in-out;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 53px;
+    padding: 29px 0px;
+    box-shadow: 2px 2px 7px #9E9E9E;
+    visibility: hidden;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.rose {
+  transition: 0.3s ease-in-out;
+  opacity: 0.1;
+}
+.title {
+    background: url('https://c4.wallpaperflare.com/wallpaper/51/338/359/red-4k-love-image-heart-wallpaper-preview.jpg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: 0.3s ease-in-out;
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+  }
+  
+  </style>
+  <body>
+    <div class="container">
+        <lord-icon
+        class="gift1"
+    src="https://cdn.lordicon.com/kbhtjtxs.json"
+    trigger="loop"
+    style="width:250px;height:250px">
+</lord-icon>
+      <div class="gift">
+        <lord-icon
+          id="icon"
+          src="https://cdn.lordicon.com/qxqvtswi.json"
+          trigger="click"
+          style="width: 300px; height: 250px"
+        >
+       
+        </lord-icon>
+     
+        <div class="card">
+            <lord-icon
+            class="rose"
+    src="https://cdn.lordicon.com/ppmqpdfo.json"
+    trigger="loop"
+    style="width:200px;height:250px">
+    </lord-icon>
+    <h2 class="title">
+        Happy valentine's Day
+    </h2>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script>
+    "use strict";
+const icon = document.querySelector("#icon");
+const container = document.getElementsByClassName("container");
+const JsConfetti = new JSConfetti();
+const card = document.querySelector(".card");
+const rose = document.querySelector(".rose");
+const title = document.querySelector(".title");
+const gift1 = document.querySelector(".gift1");
+icon.addEventListener("click", () => {
+    JsConfetti.addConfetti();
+    setTimeout(() => {
+        icon.style.visibility = "hidden";
+        icon.style.opacity = "0";
+        icon.style.transition = "0.2s ease-in-out";
+        icon.style.transform = "scale(0.4)";
+        gift1.style.transform = "scale(1.2)";
+        card.style.visibility = "visible";
+        rose.style.transform = "scale(1.2)";
+        gift1.style.visibility = "visible";
+        title.style.transform = "scale(1.7)";
+        rose.style.opacity = "1";
+    }, 450);
+});
+
+  </script>
+</html>
